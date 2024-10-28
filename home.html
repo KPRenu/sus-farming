@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Fertilizer Recommendations</title>
+  <link rel="stylesheet" href="home.css">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <div class="container">
+      <h1 class="logo">Sustainable Farming</h1>
+      <nav>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#aboutus">About Us</a></li>
+          <li><a href="crop.html">crop info</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <!-- <li><a href="#contact">Contact Us</a></li> -->
+          <li><a href="login.html" class="btn-signup">Sign Up | login</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="hero-content">
+      <h2 style="color: black;">Grow Smarter, Sustainably</h2>
+      <p style="font-size: large;">Optimize your crops with data-driven fertilizer recommendations for sustainable farming and improved yield.</p>
+      <a href="#features" class="btn">Explore Features</a>
+      <a href="login.html" class="btn-primary">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Solution Overview Section -->
+  <section class="solution-overview">
+    <div class="container">
+      <h2 >Our Solution for a Greener Tomorrow</h2>
+      <p>Our application is a personalized recommendation system designed to enhance soil health, optimize fertilizer use, and improve crop yield.</p>
+      <!-- <img src="solution-overview.png" alt="Solution Overview Image"> -->
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section class="features" id="features">
+    <div class="container">
+      <h2>Key Features</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <h3>Soil Health Analysis</h3>
+          <p>Analyzes soil quality for better crop health and yield.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Custom Fertilizer Recommendations</h3>
+          <p>Personalized recommendations to avoid overuse and promote sustainable farming.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Weather Insights</h3>
+          <p>Weather-based advice for optimal fertilizer application timing.</p>
+        </div>
+        <div class="feature-card">
+          <h3>Crop-Specific Advice</h3>
+          <p>Tailored guidance based on your crop type.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- How It Works Section -->
+  <section class="how-it-works" id="how-it-works">
+    <div class="container">
+      <h2>How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <h3>1. Upload Soil Data</h3>
+          <p>Start by entering or uploading your soil test results.</p>
+        </div>
+        <div class="step">
+          <h3>2. Select Crop & Location</h3>
+          <p>Choose your crop type and farm location.</p>
+        </div>
+        <div class="step">
+          <h3>3. Get Recommendations</h3>
+          <p>Receive customized fertilizer suggestions with usage guidelines.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Impact & Benefits Section -->
+  <section class="impact">
+    <div class="container">
+      <h2>Why Choose Our Solution?</h2>
+      <ul>
+        <li><strong>Increased Yield:</strong> Improved crop production and higher farmer income.</li>
+        <li><strong>Cost Efficiency:</strong> Save on unnecessary fertilizer expenses.</li>
+        <li><strong>Soil Conservation:</strong> Maintain and improve soil health for future crops.</li>
+        <li><strong>Environmental Sustainability:</strong> Reduce harmful environmental impact.</li>
+      </ul>
+    </div>
+  </section>
+
+   <!-- About Us Section -->
+<section id="aboutus" class="about-section">
+  <div class="about-container">
+      <h2 class="about-heading">About Us</h2>
+      <p class="about-description">
+          We are a team dedicated to promoting sustainable farming practices. Our goal is to help farmers adopt eco-friendly methods that increase crop yield while preserving the environment. Join us on our journey towards a greener future!
+      </p>
+  </div>
+</section>
+
+  <!-- Call to Action Section -->
+  <section class="cta">
+    <div class="container">
+      <h2>Ready to Cultivate Smarter?</h2>
+      <a href="signup.html" class="btn-primary">Get Started</a>
+    </div>
+  </section>
+
+  <!-- Footer Section -->
+  <footer>
+    <div class="container" id="aboutus">
+      <p>&copy; 2023 Sustainable Farming. All rights reserved.</p>
+      <nav>
+        <ul>
+          <li><a href="#privacy">Privacy Policy</a></li>
+          <li><a href="#terms">Terms of Service</a></li>
+          <li><a href="#contact">Contact Support</a></li>
+        </ul>
+      </nav>
+    </div>
+  </footer>
+
+  <link rel="stylesheet" href="styles.css">
+</body>
+<script>
+  let button = document.querySelector(".btn-primary");
+button.addEventListener("click", () => {
+    window.location.href = "login.html";
+});
+
+</script>
+</html>

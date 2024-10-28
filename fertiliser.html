@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fertilizer Recommendation</title>
+    <link rel="stylesheet" href="fertiliser.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <h3 class="navbar-title">Fertilizer Recommendation</h3>
+        <ul class="navbar-links">
+            <li><a href="main_home.html">Home</a></li>
+            <li><a href="main_home.html">Services</a></li>
+            <li><a href="main_home.html" class="profile-icon"></a></li>
+            <!-- <li><a href="#contact">Contact</a></li> -->
+        </ul>
+    </nav>
+
+
+    <div class="container">
+        <h1>Fertilizer Recommendation System</h1>
+        <form id="fertilizer-form">
+            <label for="soil-nutrients">Soil Nutrient Levels:</label>
+            <input type="text" id="soil-nutrients" placeholder="N-P-K levels (e.g., 20-10-10)" required>
+
+            <label for="moisture">Soil Moisture (%):</label>
+            <input type="number" id="moisture" placeholder="e.g., 30" min="0" max="100" required>
+
+            <label for="temperature">Temperature (°C):</label>
+            <input type="number" id="temperature" placeholder="e.g., 25" required>
+
+            <label for="rainfall">Rainfall (mm):</label>
+            <input type="number" id="rainfall" placeholder="e.g., 50" required>
+
+            <label for="humidity">Humidity Range (%):</label>
+            <input type="text" id="humidity" placeholder="e.g., 40-60" required>
+
+            <button type="submit">Get Recommendation</button>
+        </form>
+        <div id="recommendation"></div>
+    </div>
+ 
+</body>
+<script >
+    document.getElementById('fertilizer-form').addEventListener('submit', function(event) {
+event.preventDefault();
+
+const soilNutrients = document.getElementById('soil-nutrients').value;
+const moisture = document.getElementById('moisture').value;
+const temperature = document.getElementById('temperature').value;
+const rainfall = document.getElementById('rainfall').value;
+const humidity = document.getElementById('humidity').value;
+
+let recommendation = "Based on your inputs: ";
+
+// Add simple logic for fertilizer recommendation
+if (moisture < 30) {
+    recommendation += "Increase soil moisture. ";
+} else if (moisture > 60) {
+    recommendation += "Reduce soil moisture. ";
+}
+
+if (temperature > 30) {
+    recommendation += "Consider using heat-resistant fertilizers. ";
+}
+
+if (soilNutrients.includes("low")) {
+    recommendation += "Add nitrogen-rich fertilizer.";
+}
+
+document.getElementById('recommendation').innerText = recommendation;
+});
+
+</script>
+</html>

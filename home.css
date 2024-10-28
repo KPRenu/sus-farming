@@ -1,0 +1,332 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+}
+
+/* Header */
+header {
+    background: #2d6a4f;
+    color: #fff;
+    padding: 1em 0;
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo-image {
+    width: 80px; /* Adjust the size as needed */
+    height: 80px;
+    margin-right: 10px;
+    border-radius: 50%;
+}
+
+header .logo {
+    font-size: 1.5em;
+    color: #fff;
+    margin-left: 10px; /* Space between logo image and text */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+header nav ul li {
+    margin-left: 1em;
+    position: relative;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect */
+header nav ul li:hover {
+    transform: scale(1.1); /* Slightly increase size */
+}
+
+header nav ul li a:hover {
+    color: #ffbf00; /* Change color on hover */
+}
+
+/* Pop-up effect on hover */
+header nav ul li::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #ffbf00;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+header nav ul li:hover::after {
+    transform: scaleX(1); /* Animate underline appearance */
+}
+
+
+/* Profile Icon for Sign Up/Login */
+.profile-icon {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-image: url('profile.png'); /* Path to your profile icon */
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('https://wallpapercat.com/w/full/6/c/a/268883-2160x1920-desktop-hd-farm-wallpaper-image.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    padding: 150px 30px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.hero-content h2,
+.hero-content p {
+    color: blue;
+    opacity: 0;
+    transform: translateX(-50%);
+    animation: slide-in 1.5s forwards;
+}
+
+.hero-content h2 {
+    animation-delay: 0.5s; /* Delay for slide effect */
+}
+
+.hero-content p {
+    animation-delay: 1.5s;
+}
+
+@keyframes slide-in {
+    from {
+        opacity: 0;
+        transform: translateX(-50%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Button Styles */
+.btn, .btn-primary {
+    display: inline-block;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    margin: 10px;
+}
+
+.btn {
+    background-color: orangered; /* Green color for Explore Features */
+}
+
+.btn-primary {
+    background-color: green; /* Brown color for Get Started */
+}
+
+.btn:hover {
+    background-color: black; /* Darker green on hover */
+}
+
+.btn-primary:hover {
+    background-color: black; /* Darker brown on hover */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .hero {
+        background-position: top;
+        background-attachment: scroll; /* Disables parallax on smaller screens for better performance */
+        padding: 100px 20px;
+    }
+}
+
+
+/* Sections */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2em 1em;
+}
+h2 {
+    text-align: center;
+    margin-bottom: 1em;
+}
+.solution-overview img {
+    width: 100%;
+}
+
+/* Features Section */
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1em;
+}
+
+.feature-card, .step {
+    background: #f1f5f8;
+    padding: 1.5em;
+    text-align: center;
+    border-radius: 8px;
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.feature-card:hover {
+    background-color: #8b4513; /* Brown color on hover */
+    color: #ffffff; /* Optional: change text color for contrast */
+}
+
+/* How It Works Section */
+.how-it-works {
+    padding: 80px 20px;
+    text-align: center;
+    background-color: black;
+}
+
+.how-it-works h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: white;
+}
+
+.steps {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.step {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 10px;
+    width: 30%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step h3 {
+    font-size: 24px;
+    color: #4CAF50; /* Green for step headers */
+    margin-bottom: 10px;
+}
+
+.step p {
+    color: #555;
+    font-size: 16px;
+}
+
+/* Hover effect */
+.step:hover {
+    background-color: yellow; /* Light brown shade on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .steps {
+        flex-direction: column;
+    }
+    
+    .step {
+        width: 80%;
+        margin: 10px auto;
+    }
+}
+
+
+
+/* Call to Action Section */
+.cta {
+    text-align: center;
+    padding: 2em 1em;
+    background: #2d6a4f;
+    color: #fff;
+}
+.cta .btn-primary {
+    background: #fff;
+    color: #2d6a4f;
+    padding: 0.5em 2em;
+    border-radius: 5px;
+}
+
+/* Footer */
+footer {
+    background: #333;
+    color: #fff;
+    padding: 1em 0;
+    text-align: center;
+}
+footer nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-top: 1em;
+}
+footer nav ul li a {
+    color: #fff;
+    margin-left: 1em;
+}
+
+/* About Us Section */
+.about-section {
+    background-color: black;
+    padding: 50px 20px;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-heading {
+    font-size: 2.5em;
+    color: yellow;
+    margin-bottom: 20px;
+}
+
+.about-description {
+    font-size: 1.1em;
+    color: white;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agricultural Crop Prices</title>
+    <link rel="stylesheet" href="agrid.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="header">
+        <h1>Agricultural Crop Prices</h1>
+        <p>Comparing prices over the last five years</p>
+    </header>
+
+    <div class="container">
+        <!-- Crop Cards -->
+        <div class="crop-card">
+            <img src="https://th.bing.com/th/id/R.740798e469c906cc46e90a74c19c52d6?rik=s2QnzkyE9Zv07w&riu=http%3a%2f%2fsparklinglife.it%2fwp-content%2fuploads%2f2020%2f03%2fRiso-.jpeg&ehk=inuwj%2f6JXrhpCbLZFLNcwNM45LjOFLbSiFpw4FAnUsk%3d&risl=&pid=ImgRaw&r=0" alt="Rice" class="crop-image">
+            <h3 class="crop-name">Rice</h3>
+            <p class="crop-price">Current Price: ₹32</p>
+            <canvas id="chartRice" class="crop-chart"></canvas>
+        </div>
+        <!-- Repeat for other crops... -->
+    </div>
+
+    <div class="container2">
+        <h1>Crop Price Comparison (2019 - 2024)</h1>
+        <canvas id="cropPriceChart"></canvas>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Agricultural Insights. All rights reserved.</p>
+    </footer>
+
+    <div class="loader" id="loader"></div>
+    <script src="agrid.js"></script>
+</body>
+</html>

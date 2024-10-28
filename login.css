@@ -1,0 +1,143 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body, html {
+    height: 100%;
+    font-family: Arial, sans-serif;
+  }
+  
+/* Background Video */
+.background-video video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+  }
+  
+  
+  /* Login Container */
+  .login-container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2em;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+    margin-top: 10%;
+    border-radius: 20px;
+    text-align: center;
+    color: #fff;
+    backdrop-filter: blur(10px);
+  }
+  
+  .login-container h2 {
+    margin-bottom: 1em;
+    font-size: 1.5em;
+    color: #fff;
+  }
+  
+  /* Form Fields */
+  #login-form input[type="text"],input[type="email"], #login-form input[type="password"] {
+    width: 100%;
+    padding: 0.75em;
+    margin: 0.5em 0;
+    border: none;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.3);
+    color: black;
+    font-size: 1em;
+    text-align: center;
+  }
+  
+  .password-field {
+    position: relative;
+  }
+  
+  .password-field .toggle-password {
+    position: absolute;
+    top: 50%;
+    right: 1em;
+    transform: translateY(-50%);
+    cursor: pointer;
+  }
+  
+  /* Sign-In Button */
+  .login-btn {
+    background: #57bc50;
+    color: #fff;
+    padding: 0.75em;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .login-btn:hover {
+    background: #0b1e10;
+  }
+  
+  /* Options */
+  .options {
+    display: flex;
+    justify-content: space-between;
+    margin: 1em 0;
+    font-size: 0.9em;
+  }
+  
+  .options a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Social Sign-In */
+  .sign-in-with {
+    margin: 1em 0;
+    color: #fff;
+  }
+  
+  .social-buttons {
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .social-btn {
+    width: 45%;
+    padding: 0.5em;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 0.9em;
+    transition: opacity 0.3s;
+  }
+  
+  .social-btn.facebook {
+    background: #3b5998;
+  }
+  
+  .social-btn.twitter {
+    background: #1da1f2;
+  }
+  
+  .social-btn:hover {
+    opacity: 0.8;
+  }
+  
+  /* Sign Up Link */
+  .sign-up-link {
+    margin-top: 1em;
+    color: #fff;
+  }
+  
+  .sign-up-link a {
+    color: #40FF;
+    text-decoration: none;
+  }
+  

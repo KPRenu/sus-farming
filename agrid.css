@@ -1,0 +1,138 @@
+/* Market - css */
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    color: #343a40;
+    margin: 0;
+}
+
+.header {
+    background-color: #2f8b57;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+.header h1{
+    font-size: 50px;
+    text-decoration:underline;
+    text-shadow: #333;
+    font-family:Arial, Helvetica, sans-serif;
+    font-style: italic;
+}
+.header p{
+    font-size: 30px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 5fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.crop-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+
+.crop-card:hover {
+    transform: scale(1.0);
+    background-color: #b7b7ca; 
+    box-shadow: 0 15px 30px rgba(106, 112, 162, 0.94);
+
+}
+
+.crop-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    
+}
+
+.crop-name {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.crop-price {
+    font-size: 1.7rem;
+    color: #28a745;
+}
+
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.loader {
+    border: 8px solid #f3f3f3; /* Light grey */
+    border-top: 8px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+    display: none; /* Hidden by default */
+    margin: 0 auto; /* Center it */
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@media (max-width: 600px) {
+    .crop-card {
+        padding: 15px;
+    }
+
+    .crop-name {
+        font-size: 1.2rem;
+    }
+
+    .crop-price {
+        font-size: 1rem;
+    }
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+}
+.container2 {
+    max-width: 1500px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+canvas {
+    width: 100%; /* Ensures the chart uses the full width */
+    height: 100%; /* Adjust height for better visibility */
+    margin-bottom: 20px; /* Add space between charts */
+}

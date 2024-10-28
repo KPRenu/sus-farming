@@ -1,0 +1,100 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f6fbf6;
+    color: #333;
+}
+
+header {
+    background-color: #1c800e;
+    color: white;
+    padding: 30px;
+    text-align: center;
+   
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-top: 10px;
+}
+
+.crop-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 40px 20px;
+}
+
+.crop-card {
+    background-color: white;
+    border-radius: 15px;
+   border-color: #1c800e;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    margin: 20px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.crop-card:hover {
+    transform: translateY(5px);
+    
+    box-shadow: 0 15px 30px rgba(45, 148, 65, 0.94);
+}
+
+.image-container {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.crop-card:hover .image-container img {
+    transform: scale(1.2);
+}
+
+.crop-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.crop-info h2 {
+    font-size: 1.8rem;
+    color: #27ae60;
+    margin-bottom: 15px;
+}
+
+.crop-info p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .crop-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .crop-card {
+        width: 90%;
+    }
+}
